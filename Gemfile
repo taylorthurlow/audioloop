@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.1'
 
-# gem 'bcrypt'                                          # allows ActiveModel has_secure_password, use for user login
+gem 'devise'                                          # user authentication
 gem 'font-awesome-rails'                              # awesome set of GPL friendly vector icons
 gem 'normalize-rails'                                 # integrate normalize.css with rails asset pipeline
 gem 'puma', '~> 3.7'                                  # use the puma application server

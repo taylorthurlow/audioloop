@@ -16,12 +16,18 @@
       <%= link_to 'audioloop', '#', class: 'site_logo' %>
 
       <nav class="site_nav">
-        <%= link_to 'some link 1', '#', class: 'site_nav_item' %>
-        <%= link_to 'some link 2', '#', class: 'site_nav_item' %>
+        <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'site_nav_item' %>
+        <% else %>
+          <%= link_to 'Sign In', new_user_session_path, class: 'site_nav_item' %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'site_nav_item' %>
+        <% end %>
       </nav>
     </header>
 
     <main class="site_main">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
   </body>

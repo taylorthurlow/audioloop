@@ -1,0 +1,5 @@
+<p id="notice"><%%= notice %></p>
+
+<h1><%= plural_table_name.titleize %></h1>
+
+<%%= render partial: "<%= plural_table_name %>/table", locals: { <%= plural_table_name %>: @<%= @plural_table_name %> } %>

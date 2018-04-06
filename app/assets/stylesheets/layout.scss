@@ -1,0 +1,51 @@
+body {
+  background-color: $color_bg;
+  color: $color_dark;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  p {
+    a {
+      color: $color_accent;
+
+      &:visited {
+        color: $color_accent;
+      }
+    }
+  }
+}
+
+.dev_header {
+  padding: 10px;
+  text-align: center;
+  color: $color_accent;
+  background: $color_light;
+  border-bottom: 2px solid $color_accent;
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    font-family: monospace;
+    line-height: 0;
+  }
+}
+
+.site_header {
+  @include flexbox;
+  min-height: 50px;
+  background-color: darken($color_bg, 4);
+
+  .site_logo {
+    @include site-nav-item;
+    font-weight: bold;
+    color: $color_accent;
+  }
+}
+
+.site_main {
+  padding: 40px 20px;
+}
+

@@ -1,0 +1,18 @@
+@mixin vhc {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+@mixin vc {
+  @include flexbox;
+  @include align-items(center);
+}
+
+// use as an @extend
+%vhc { @include vhc };
+%vc { @include vc };
+
+// might as well make them classes
+.vhc { @include vhc };
+.vc { @include vc };

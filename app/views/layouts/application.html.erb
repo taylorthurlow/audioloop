@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>audioloop</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if Rails.env.development? and ENV['HIDE_DEV_BANNER'] != 'true' %>
+      <%= render partial: 'layouts/dev_header' %>
+    <% end %>
+
+    <header class="site_header">
+      <%= link_to 'audioloop', '#', class: 'site_logo' %>
+
+      <nav class="site_nav">
+        <%= link_to 'some link 1', '#', class: 'site_nav_item' %>
+        <%= link_to 'some link 2', '#', class: 'site_nav_item' %>
+      </nav>
+    </header>
+
+    <main class="site_main">
+      <%= yield %>
+    </main>
+  </body>
+
+  <footer>
+
+  </footer>
+</html>

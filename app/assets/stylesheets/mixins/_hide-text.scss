@@ -1,0 +1,11 @@
+@mixin hide-text {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+}
+
+.hide-text,
+.a11y {
+  @include hide-text;
+}

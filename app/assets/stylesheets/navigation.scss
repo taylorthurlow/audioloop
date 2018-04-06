@@ -1,0 +1,41 @@
+.site_nav {
+  $bp-mobile: 'max-width: 779px';
+  $bp-desktop: 'min-width: 780px';
+
+  @media ($bp-mobile) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    background: #1E2024;
+    z-index: 99999;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+
+  @media ($bp-desktop) {
+    @include flexbox;
+    margin-left: auto;
+  }
+
+  .site_nav_item {
+    @media ($bp-mobile) {
+      display: block;
+      padding: 10px 20px;
+      text-align: right;
+
+      .site_nav_menu {
+        margin-left: auto;
+        font-size: 22px;
+      }
+    }
+    @media ($bp-desktop) {
+      @include site-nav-item;
+
+      .site_nav_menu {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: $color_bg;
   color: $color_dark;
@@ -16,6 +22,12 @@ body {
       }
     }
   }
+}
+
+.site_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .dev_header {
@@ -47,5 +59,18 @@ body {
 
 .site_main {
   padding: 40px 20px;
+  flex: 1
 }
 
+.site_footer {
+  @include flexbox;
+  min-height: 50px;
+  width: 100%;
+  background-color: darken($color_bg, 4);
+  color: darken($color_bg, 32);
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}

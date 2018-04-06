@@ -47,5 +47,8 @@ module AudioLoop
         g.template_engine :all
         g.fallbacks[:all] = :erb
     end
+
+    # Set the application version number
+    config.app_version = '0.1.0'
   end
 end

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 gem 'devise'                                          # user authentication
+gem 'discogs-wrapper'                                 # ruby wrapper for Discogs API
 gem 'font-awesome-rails'                              # awesome set of GPL friendly vector icons
 gem 'normalize-rails'                                 # integrate normalize.css with rails asset pipeline
 gem 'puma', '~> 3.7'                                  # use the puma application server

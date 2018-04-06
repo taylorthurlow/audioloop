@@ -1,3 +1,7 @@
 language: ruby
 rvm:
-  - 2.4.2
+  - 2.5
+before_install:
+  # required to fix https://github.com/travis-ci/travis-ci/issues/8978
+  - gem install bundler
+  - gem update --system

@@ -1,0 +1,11 @@
+<div class="search-result-artist">
+  <p><%= "#{result.title} (#{result.id}) - " %></p>
+  <p>
+    <%= form_for :artist, url: artists_path, method: :post do |f| %>
+      <%= f.hidden_field :name, value: result.title %>
+      <%= f.hidden_field :image_url, value: result.cover_image %>
+      <%= f.hidden_field :discogs_id, value: result.id.to_i %>
+      <%= f.submit 'Add This Artist' %>
+    <% end %>
+  </p>
+</div>

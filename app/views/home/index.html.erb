@@ -1,2 +1,10 @@
 <h1>Home</h1>
 <p>Welcome to AudioLoop.</p>
+
+<h3>Search for an artist:</h3>
+<%= form_tag discogs_search_path, method: :get do %>
+  <%= label_tag :query, 'Search query:' %>
+  <%= text_field_tag :query %>
+  <%= hidden_field_tag :query_type, :artist %>
+  <%= submit_tag 'Search' %>
+<% end %>

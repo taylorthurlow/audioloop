@@ -1,0 +1,26 @@
+<div class="table_partial">
+  <table id="artists">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image url</th>
+        <th>Discogs ID</th>
+        <th colspan="2" width="100"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% artists.each do |artist| %>
+        <tr>
+          <td><%= artist.name %></td>
+          <td><%= artist.description %></td>
+          <td><%= link_to 'image', artist.image_url %></td>
+          <td><%= link_to artist.discogs_id, artist.discogs_url %></td>
+          <td><%= link_to '', artist, class: 'fa fa-eye' %></td>
+          <td><%= link_to '', artist, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

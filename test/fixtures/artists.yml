@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+artist_one:
+  name: Nickelback
+  description: flockowner global langi dispraiser unpunctuated disproven flumdiddle antiusurious diner Hermetic pithful unmitigatedness perisarcal unevitably blither overprolix prepositional internodial dorsiflex pangane Epipactis ingiving workout expiration
+  image_url: http://placehold.it/100x100
+  discogs_id: 108713
+
+artist_two:
+  name: Four Tet
+  description: overinvestment compassing penetral purulent puritanical Turkishness transformable rerack complacency goutiness titbitty attitudinarian Salamandra metaplumbic oitava carpophagous solipsistic hardim birdling alloclasite bedridden conjoint Fletcherite purveyor
+  image_url: http://placehold.it/100x100
+  discogs_id: 3543

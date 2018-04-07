@@ -20,6 +20,7 @@ group :development do
   gem 'brakeman', require: false                      # find common security vulnerabilities
   gem 'rack-mini-profiler', require: false            # profile page loading and display load time analysis
   gem 'rubocop', require: false                       # help adhere to ruby syntax and best practices
+  gem 'rubocop-rspec', require: false                 # rubocop linting for RSpec files
   gem 'spring'                                        # speeds up development by keeping your application running in the background
   gem 'spring-watcher-listen'                         # use the Listen gem to find filesystem changes instead of polling the filesystem
   gem 'traceroute'                                    # find unused routes and unreachable action methods
@@ -27,14 +28,18 @@ group :development do
 end
 
 group :test do
-  gem 'mocha'                                         # stubbing and mocking
+  gem 'selenium-webdriver'                            # allow feature specs to use JS
+  gem 'webmock'                                       # prevent remote connections during tests
 end
 
 group :development, :test do
   gem 'bootsnap'                                      # load your rails server quicker using bytecode caching and $PATH caching
   gem 'byebug'                                        # a console debugger
+  gem 'capybara', '~> 2.13'                           # feature specs library
   gem 'dotenv-rails'                                  # load environment variables from .env
+  gem 'factory_bot_rails'                             # generate fixture data
   gem 'guard'                                         # run custom rules when files or directories are modified
   gem 'guard-livereload', require: false              # reload browser when view files are modified (requires LiveReload browser ext.)
-  gem 'guard-minitest'                                # contextually re-run tests when saving test files
+  gem 'guard-rspec'                                   # contextually re-run tests when saving test files
+  gem 'rspec-rails'                                   # test suite
 end

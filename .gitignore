@@ -21,6 +21,7 @@ db/*.sqlite3
 
 # dev environment
 *.sublime-workspace
+/coverage
 
 # bower components - usually necessary to manually check in some parts of each
 # bower component, remember to do this on a case-by-case basis

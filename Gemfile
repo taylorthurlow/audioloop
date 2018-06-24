@@ -29,6 +29,7 @@ end
 
 group :test do
   gem 'selenium-webdriver'                            # allow feature specs to use JS
+  gem 'simplecov', require: false                     # code coverage analysis
   gem 'webmock'                                       # prevent remote connections during tests
 end
 
@@ -38,6 +39,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'                           # feature specs library
   gem 'dotenv-rails'                                  # load environment variables from .env
   gem 'factory_bot_rails'                             # generate fixture data
+  gem 'faker', github: 'stympy/faker'                 # generate random data
   gem 'guard'                                         # run custom rules when files or directories are modified
   gem 'guard-livereload', require: false              # reload browser when view files are modified (requires LiveReload browser ext.)
   gem 'guard-rspec'                                   # contextually re-run tests when saving test files

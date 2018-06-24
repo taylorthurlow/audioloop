@@ -25,8 +25,8 @@ describe Artist, type: :model do
 
   context 'when discogs id is not unique' do
     it 'is not valid' do
-      create(:artist)
-      other_artist = build(:artist, discogs_id: artist.discogs_id)
+      first_artist = create(:artist)
+      other_artist = build(:artist, discogs_id: first_artist.discogs_id)
 
       expect(other_artist).not_to be_valid
     end

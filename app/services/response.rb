@@ -1,3 +1,4 @@
+# :nocov:
 class Response
   attr_reader :data, :message
 
@@ -10,3 +11,4 @@ class Response
     raise NotImplementedError
   end
 end
+# :nocov:

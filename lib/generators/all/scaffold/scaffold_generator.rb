@@ -1,3 +1,4 @@
+# :nocov:
 # lib/generators/all/scaffold/scaffold_generator.rb
 require 'rails/generators/named_base'
 require 'rails/generators/resource_helpers'
@@ -32,3 +33,4 @@ module All # :nodoc:
     end
   end
 end
+# :nocov:
